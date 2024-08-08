@@ -113,6 +113,7 @@
 				B94117B92C64E7F900190524 /* Frameworks */,
 				B94117BA2C64E7F900190524 /* Resources */,
 				D21322EDAD72313079FA5237 /* [CP] Embed Pods Frameworks */,
+				B9D0C1E72C65003300CE0A4A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -169,6 +170,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B9D0C1E72C65003300CE0A4A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"machine api.mapbox.com\" > ~/.netrc\necho \"login mapbox\" >> ~/.netrc\necho \"password $MAPBOX_ACCESS_TOKEN\" >> ~/.netrc\nchmod 600 ~/.netrc\n\n";
+		};
 		D21322EDAD72313079FA5237 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
