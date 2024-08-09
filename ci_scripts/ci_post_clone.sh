@@ -1,4 +1,7 @@
-#!/bin/sh
-if [ -f "$CI_WORKSPACE/Podfile" ]; then
-  pod install --silent
-fi
+#!/bin/bash
+
+touch ~/.netrc
+
+echo "machine api.mapbox.com" > ~/.netrc
+echo "login mapbox" >> ~/.netrc
+echo "password ${MAPBOX_TOKEN}" >> ~/.netrc
