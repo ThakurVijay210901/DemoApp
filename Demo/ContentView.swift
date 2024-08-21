@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+@_spi(Experimental) import MapboxMaps
+
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Map(initialViewport: .camera(center: .init(latitude: 30.7112, longitude: 76.6903), zoom: 14)) {
+            
         }
-        .padding()
+        .mapStyle(.streets)
     }
 }
 
